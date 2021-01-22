@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58283D4525BB1B7800B1CA30 /* arco de saturno.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 58283D4425BB1B7800B1CA30 /* arco de saturno.usdz */; };
+		58283D5525BB1ED500B1CA30 /* saturn.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 58283D5425BB1ED500B1CA30 /* saturn.scnassets */; };
 		58E81E5E25B742E900473056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E81E5D25B742E900473056 /* AppDelegate.swift */; };
 		58E81E6025B742E900473056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E81E5F25B742E900473056 /* SceneDelegate.swift */; };
 		58E81E6225B742E900473056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E81E6125B742E900473056 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58283D4425BB1B7800B1CA30 /* arco de saturno.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = "arco de saturno.usdz"; path = "../../arco de saturno.usdz"; sourceTree = "<group>"; };
+		58283D5425BB1ED500B1CA30 /* saturn.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = saturn.scnassets; sourceTree = "<group>"; };
 		58E81E5A25B742E900473056 /* AR Galaxy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Galaxy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		58E81E5D25B742E900473056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58E81E5F25B742E900473056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		58E81E5C25B742E900473056 /* AR Galaxy */ = {
 			isa = PBXGroup;
 			children = (
+				58283D5425BB1ED500B1CA30 /* saturn.scnassets */,
 				58E81E5D25B742E900473056 /* AppDelegate.swift */,
 				58E81E5F25B742E900473056 /* SceneDelegate.swift */,
 				58E81E6125B742E900473056 /* ViewController.swift */,
@@ -66,6 +71,7 @@
 				58E81E6B25B742EB00473056 /* LaunchScreen.storyboard */,
 				58E81E6E25B742EB00473056 /* Info.plist */,
 				58E81E6625B742E900473056 /* AR_Galaxy.xcdatamodeld */,
+				58283D4425BB1B7800B1CA30 /* arco de saturno.usdz */,
 			);
 			path = "AR Galaxy";
 			sourceTree = "<group>";
@@ -129,6 +135,8 @@
 			files = (
 				58E81E6D25B742EB00473056 /* LaunchScreen.storyboard in Resources */,
 				58E81E6A25B742EB00473056 /* Assets.xcassets in Resources */,
+				58283D4525BB1B7800B1CA30 /* arco de saturno.usdz in Resources */,
+				58283D5525BB1ED500B1CA30 /* saturn.scnassets in Resources */,
 				58E81E6525B742E900473056 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
