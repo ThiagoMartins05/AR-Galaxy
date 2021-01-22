@@ -30,16 +30,13 @@ class ViewController: UIViewController {
     func addPlanets(){
         
         let sol = planet(geometry: SCNSphere(radius: 0.028), diffuse: UIImage(named: "Sun diffuse"), emission: nil, specular: nil, normal: nil, distance: 0)
-        let sunRotation = CreateRotation(duration: 4)
+        
+        let sunRotation = CreateRotation(duration: 3)
         sol.runAction(sunRotation)
         
         self.sceneView.scene.rootNode.addChildNode(sol)
 
         
-        let terra = planet(geometry: SCNSphere(radius: 0.02), diffuse: UIImage(named: "Earth diffuse"), emission: UIImage(named: "Earth emission"), specular: UIImage(named: "Earth normal"), normal: UIImage(named: "Earth specular"), distance: 0.1)
-        
-        let earthRotation = CreateRotation(duration: 7)
-        terra.runAction(earthRotation)
         
         let earthParent = SCNNode()
         let earthParentRotation = CreateRotation(duration: 15)
@@ -47,18 +44,26 @@ class ViewController: UIViewController {
         self.sceneView.scene.rootNode.addChildNode(earthParent)
         
         
+        let terra = planet(geometry: SCNSphere(radius: 0.02), diffuse: UIImage(named: "Earth diffuse"), emission: UIImage(named: "Earth emission"), specular: UIImage(named: "Earth normal"), normal: UIImage(named: "Earth specular"), distance: 0.1)
+        
+        let earthRotation = CreateRotation(duration: 7)
+        terra.runAction(earthRotation)
         
         earthParent.addChildNode(terra)
+        
+        let saturnParent = SCNNode()
+        let saturnParentRotation = CreateRotation(duration: 20)
+        saturnParent.runAction(saturnParentRotation)
+        self.sceneView.scene.rootNode.addChildNode(saturnParent)
         
         
         let saturno = planet(geometry: SCNSphere(radius: 0.015), diffuse: UIImage(named: "Saturn difuse"), emission: nil, specular: nil, normal: nil, distance: 0.15)
         
-        let saturnParent = SCNNode()
-        let saturnParentRotation = CreateRotation(duration: 19)
-        saturnParent.runAction(saturnParentRotation)
+        let saturnRotation = CreateRotation(duration: 4)
+        saturno.runAction(saturnRotation)
         
-        self.sceneView.scene.rootNode.addChildNode(saturnParent)
         saturnParent.addChildNode(saturno)
+        
         
         let arcoScene = SCNScene(named: "arcoDeSaturno.scnassets/arcoDeSaturno.scn")
         let arcoNode = arcoScene?.rootNode.childNode(withName: "arcoDeSaturno", recursively: false)
@@ -84,7 +89,8 @@ class ViewController: UIViewController {
     
     func CreateRotation(duration: TimeInterval) -> SCNAction{
         
-        let rotation = SCNAction.rotateBy(x: 0.0, y: .pi*2, z: 0.0, duration: 4)
+        //let rotation = SCNAction.rotateBy(x: 0.0, y: .pi*2, z: 0.0, duration: 4)
+        let rotation = SCNAction.rotateBy(x: 0.0, y: .pi*2, z: 0.0, duration: duration)
         let rotateForever = SCNAction.repeatForever(rotation)
         return rotateForever
         
